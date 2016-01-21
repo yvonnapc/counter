@@ -1,14 +1,17 @@
 $(document).ready(function(event){
-  var countTo = $('#captain').val();
-  var countBy = $('#mate').val();
-  var pineapple = anyString.();
+  $("form#CountChocula").submit(function(){
+    var countTo = $('input#captain').val();
+    var countBy = $('input#mate').val();
+    var result = CountBy(countTo, countBy);
 
 
-  for (i = 0; i  > countTo ; i += countBy) {
-    $("#test").append();
 
+    for (i = 0; i  > countTo ; i += countBy) {
+      result.push(i*countBy);
+    }
+    return result;
 
-}
+  event.preventDefault();
+});
 
-event.preventDefault();
 });
